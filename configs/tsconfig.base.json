@@ -11,4 +11,7 @@
       "allowSyntheticDefaultImports": true,
     },
     "files": ["../src/index.ts"],
+    "exclude": [
+      "__test__"
+    ]
   }
