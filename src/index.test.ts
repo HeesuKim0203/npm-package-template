@@ -1,4 +1,4 @@
-import { helloWorld } from '../index'
+import { helloWorld } from './index'
 
 
 test('Hello world function test', () => {
