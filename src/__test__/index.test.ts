@@ -6,3 +6,5 @@ test('Hello world function test', () => {
     expect(helloWorld()).toEqual('Hello World from my example modern npm package!')
     
 })
+
+// Todo : Add package test
