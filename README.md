@@ -49,9 +49,10 @@ npm test
 
 To use this template for your NPM package:
 
-1. Modify the package.json with your package details.
-2. Implement your package code in the appropriate directories.
-3. Use the provided scripts for building and testing your package.
+1. Modify the <b>package.json</b> with your package details.
+2. <b>Continuously Update the Version:</b> Ensure to continuously update the version field in <b>package.json</b> for each release. This is important to track changes and manage releases effectively.
+3. Implement your package code in the appropriate directories.
+4. Use the provided scripts for building and testing your package.
 
 ### Deploying Your Package
 To deploy your package to NPM:
