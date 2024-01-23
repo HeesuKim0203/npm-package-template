@@ -1,5 +1,3 @@
-## This is a demo, not an package. I hope you don't get confused. You need to use a github template to use it!
-
 # NPM Public Package Template
 
 ## About The Project
