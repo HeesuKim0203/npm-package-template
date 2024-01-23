@@ -1,8 +1,12 @@
+## This is a demo, not an package. I hope you don't get confused. You need to use a github template to use it!
+
 # NPM Public Package Template
 
 ## About The Project
 
 ### Purpose
+
+<b>It's built on the premise of a Mac. It might not work properly in other environments.</b>
 
 This project aims to enable developers to quickly and efficiently deploy NPM public packages. Designed to minimize setup, this template facilitates the creation, management, and distribution of NPM packages.
 
@@ -55,6 +59,7 @@ To use this template for your NPM package:
 4. Use the provided scripts for building and testing your package.
 
 ### Deploying Your Package
+
 To deploy your package to NPM:
 
 Set up your NPM credentials locally.
