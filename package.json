@@ -1,16 +1,18 @@
 {
-  "name": "npm-public-package-test",
-  "version": "1.0.6",
+  "name": "npm-public-package",
+  "version": "1.0.2",
   "description": "The aim of this project is to enable developers to rapidly and efficiently deploy NPM public packages. This template is designed to allow users to create, manage, and distribute their NPM packages with minimal setup.",
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "browser": {
+    "npm-public-package": "./dist/index.bundle.js"
+  },
   "scripts": {
-    "test": "rimraf ./npm-public-package-test-*.tgz && npm pack && npm install ./npm-public-package-test-*.tgz && jest && npm uninstall npm-public-package-test",
-    "clean": "./node_modules/.bin/rimraf ./lib",
-    "build": "npm run clean && npm run build:esm && npm run build:cjs",
-    "build:esm": "./node_modules/.bin/tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
-    "build:cjs": "./node_modules/.bin/tsc -p ./configs/tsconfig.cjs.json",
-    "prepack": "npm run build"
+    "test:unit" : "jest",
+    "test:pack": "rm -rf ./npm-public-package-*.tgz && npm uninstall npm-public-package && npm pack && npm install ./npm-public-package-*.tgz && ts-node test.ts && node test.js",
+    "clean": "rm -rf ./lib && rm -rf ./dist",
+    "build": "npm run clean && webpack --mode production"
   },
   "keywords": [],
   "author": "heesukim",
@@ -19,7 +21,8 @@
     "access": "public"
   },
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "dist/**/*"
   ],
   "exports": {
     ".": {
@@ -37,10 +40,13 @@
     "@types/jest": "^29.5.11",
     "jest": "^29.7.0",
     "jest-config": "^29.7.0",
-    "rimraf": "^5.0.5",
+    "npm-public-package": "file:npm-public-package-1.0.2.tgz",
     "ts-jest": "^29.1.1",
+    "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4"
   },
   "repository": {
     "type": "git",
