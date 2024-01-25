@@ -2,4 +2,5 @@
 module.exports = {
     verbose: true,
     preset: 'ts-jest',
+    transformIgnorePatterns : [ '<rootDir>/scripts/', '/scripts/' ]
 }
