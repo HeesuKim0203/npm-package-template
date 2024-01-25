@@ -24,7 +24,7 @@ git clone https://github.com/HeesuKim0203/npm-package-template
 
 ### Prerequisites
 
-- Node.js (Version 14 or later recommended)
+- Node.js (Version 16, 18, 20 or later recommended)
 - NPM (with an account that can publish packages)
 
 ### Installation
@@ -39,12 +39,6 @@ Build the project (if applicable):
 
 ```bash
 npm run build
-```
-
-Run tests to ensure everything is working correctly:
-
-```bash
-npm test
 ```
 
 ### Usage
