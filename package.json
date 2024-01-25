@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test:unit": "jest __test__",
-    "test:pack": "npm run build && rm -rf ./npm-public-package-*.tgz && npm uninstall npm-public-package && npm pack && npm install ./npm-public-package-*.tgz && ts-node ./scripts/test.ts && node ./scripts/test.js",
+    "test:pack": "npm run build && rm -rf ./npm-public-package-*.tgz && npm uninstall npm-public-package && npm pack && npm install -D ./npm-public-package-*.tgz && ts-node ./scripts/test.ts && node ./scripts/test.js",
     "clean": "rm -rf ./lib && rm -rf ./dist",
     "build": "npm run clean && webpack --mode production"
   },
